@@ -2,12 +2,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-  string x, aux = "YES";
+  string x, aux = "NO";
   cin>>x;
+  int count=0;
   for (int i = 0; i < x.size(); i++) {
-    if(x[i] != '4' and x[i] != '7'){
-      aux = "NO";
+    if(x[i] == '4' or x[i] == '7'){
+      count++;
     }
+  }
+  if(count==7 or count== 4){
+    aux = "YES";
   }
   cout<<aux<<endl;
   return 0;
